@@ -629,7 +629,7 @@ fieldset.fld{border:0;margin:0;padding:0}
         </div>
       </div>
       <div class="fig rv" data-in="fig" style="--d:2">
-        <div class="fig__photo" id="photo" role="img" aria-label="Portrait of Muhammad Abdullah"><span class="me" id="meWrap"><img alt="" src="img/me.webp" id="meImg"><canvas class="me__cv" id="meCv" aria-hidden="true"></canvas></span>
+        <div class="fig__photo" id="photo" role="img" aria-label="Portrait of Muhammad Abdullah"><span class="me" id="meWrap"><img alt="" src="me.webp" id="meImg"><canvas class="me__cv" id="meCv" aria-hidden="true"></canvas></span>
         </div>
         <span class="fig__hint" aria-hidden="true">Hover to paint colour</span>
         <button class="fig__card" id="cardOpen" type="button">My ability card</button>
@@ -894,7 +894,7 @@ fieldset.fld{border:0;margin:0;padding:0}
 
   /* doors */
   function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;'); }
-  function I(n){ return 'img/' + n + '.jpg'; }
+  function I(n){ return '' + n + '.jpg'; }
   function shot(n, cap, cls){ return '<figure class="shot ' + (cls||'') + '" tabindex="0" data-lb="' + I(n) + '" data-cap="' + esc(cap) + '"><img loading="lazy" src="' + I(n) + '" alt="' + esc(cap) + '"><figcaption>' + esc(cap) + '</figcaption></figure>'; }
   function cell(cls, n, cap, extra){ return '<div class="' + cls + '">' + shot(n, cap, extra) + '</div>'; }
   function head(no, title, desc, meta){
