@@ -488,7 +488,7 @@ fieldset.fld{border:0;margin:0;padding:0}
 /* reveal */
 .rv{transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
 .js .rv.pre{opacity:.001;transform:translateY(26px)}
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion: reduce) and (max-width:0px){
   *,*::before,*::after{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
   .js .rv.pre{opacity:1;transform:none}
@@ -809,7 +809,7 @@ fieldset.fld{border:0;margin:0;padding:0}
 
 <script>
 (function(){
-  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce = false; /* animations stay on even when the phone asks for reduced motion */
   document.documentElement.classList.add('js');
   var $ = function(id){ return document.getElementById(id); };
   var BEH = 'https://www.behance.net/gallery/244836081/Creative-Graphic-Designer-Portfolio';
